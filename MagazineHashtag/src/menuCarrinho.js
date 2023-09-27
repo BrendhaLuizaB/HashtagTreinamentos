@@ -119,16 +119,22 @@ function renderizarProdutosCarrinho() {
     desenharProdutoNoCarrinho(idProduto);
   }
 }
+let contadorItens = document.getElementById("contador-itens")
 
 export function adicionarAoCarrinho(idProduto) {
   if (idProduto in idsProdutoCarrinhoComQuantidade) {
     incrementarQuantidadeProduto(idProduto);
     return;
   }
+  
   idsProdutoCarrinhoComQuantidade[idProduto] = 1;
   desenharProdutoNoCarrinho(idProduto);
   atualizarPrecoCarrinho();
+  contadorItens.innerHTML = Object.keys(idsProdutoCarrinhoComQuantidade).length
+  console.log(Object.keys(idsProdutoCarrinhoComQuantidade).length, "fora do if >>>>>>>>>>>>")
 }
+
+
 
 export function atualizarPrecoCarrinho() {
   const precoCarrinho = document.getElementById("preco-total");
@@ -138,5 +144,6 @@ export function atualizarPrecoCarrinho() {
       catalogo.find((p) => p.id === idProdutoNoCarrinho).preco *
       idsProdutoCarrinhoComQuantidade[idProdutoNoCarrinho];
   }
+  contadorItens.innerHTML = Object.keys(idsProdutoCarrinhoComQuantidade).length
   precoCarrinho.innerText = `Total: $${precoTotalCarrinho}`;
 }
