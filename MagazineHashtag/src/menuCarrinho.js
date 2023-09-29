@@ -131,6 +131,8 @@ export function adicionarAoCarrinho(idProduto) {
   desenharProdutoNoCarrinho(idProduto);
   atualizarPrecoCarrinho();
   contadorItens.innerHTML = Object.keys(idsProdutoCarrinhoComQuantidade).length
+  document.getElementById("contador-itens").classList.remove("bg-slate-950");
+  document.getElementById("contador-itens").classList.add("bg-slate-300");
   console.log(Object.keys(idsProdutoCarrinhoComQuantidade).length, "fora do if >>>>>>>>>>>>")
 }
 
@@ -145,5 +147,9 @@ export function atualizarPrecoCarrinho() {
       idsProdutoCarrinhoComQuantidade[idProdutoNoCarrinho];
   }
   contadorItens.innerHTML = Object.keys(idsProdutoCarrinhoComQuantidade).length
+  document.getElementById("contador-itens").classList.remove("bg-slate-300");
+  document.getElementById("contador-itens").classList.remove("text-slate-700");
+  document.getElementById("contador-itens").classList.add("text-slate-950");
+  document.getElementById("contador-itens").classList.add("bg-slate-950");
   precoCarrinho.innerText = `Total: $${precoTotalCarrinho}`;
 }

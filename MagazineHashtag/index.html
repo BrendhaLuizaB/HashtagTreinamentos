@@ -42,32 +42,39 @@
         <button class="mx-3" id="abrir-login"><i class="fa-solid fa-user"></i></button>
         <button class="mr-2" id="abrir-carrinho">
           <div class="flex">
-          <div id="contador-itens" class="bg-slate-300 text-slate-700 font-bold rounded-full text-sm w-5 right-0"></div>
+          <div id="contador-itens" class="bg-slate-950 text-slate-700 font-bold rounded-full text-sm w-5 right-0"></div>
           <i class="fa-solid fa-cart-shopping"></i>
         </div>
         </button>
       </div>
     </header>
-    <section id="login" class="fixed top-[-400px] h-96 w-96 right-[580px] bg-slate-950 rounded z-50 duration-300">
-      <div class="flex justify-center">
-        <h1 class="text-slate-200 text-2xl my-3">Login</h1>
-      </div>
-      <div class="flex flex-wrap m-5 justify-center">
-        <input type="text" placeholder="Email" class="pl-2 w-80 h-9">
-        <input type="text" placeholder="Senha" class="my-3 pl-2 w-80 h-9">
-      </div>
-      <div class="flex justify-center">
-        <button class="bg-slate-200 text-base w-80 h-9 rounded-sm">Entrar</button>
-      </div>
-      <div class="flex justify-center items-center">
-        <div class="border-solid border-b-[0.5px] border-zinc-200 w-36">oi</div>
-        <div class="text-slate-200 font-light text-sm mt-5 mx-3">OU</div>
-        <div class="border-solid border-b-[0.5px] border-zinc-200 w-36">oi</div>
-      </div>
-      <div class="flex justify-center">
-        <button class="bg-slate-200 text-base w-80 h-9 rounded-sm mt-5">Criar conta</button>
-      </div>
-    </section>
+    <div id="bg-login" class="flex justify-center fixed top-[-750px] z-50 duration-300 h-screen w-screen">
+      <section id="login" class="fixed top-[-400px] h-96 w-96 bg-slate-950 rounded z-50 duration-300">
+        <div class="flex justify-between text-slate-200 m-5">
+          <div>
+            <h1 class="text-slate-200 text-2xl">Login</h1>
+          </div>
+          <div id="fechar-login">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </div>
+        </div>
+        <div class="flex flex-wrap m-5 justify-center">
+          <input type="text" placeholder="Email" class="pl-2 w-80 h-9">
+          <input type="text" placeholder="Senha" class="my-3 pl-2 w-80 h-9">
+        </div>
+        <div class="flex justify-center">
+          <button class="bg-slate-200 text-base w-80 h-9 rounded-sm">Entrar</button>
+        </div>
+        <div class="flex justify-center items-center">
+          <div class="border-solid border-b-[0.5px] border-zinc-200 w-36"></div>
+          <div class="text-slate-200 font-light text-sm mt-5 mx-3">OU</div>
+          <div class="border-solid border-b-[0.5px] border-zinc-200 w-36"></div>
+        </div>
+        <div class="flex justify-center">
+          <button class="bg-slate-200 text-base w-80 h-9 rounded-sm mt-5">Criar conta</button>
+        </div>
+      </section>
+    </div>
     <main>
       <section
         id="produto-container"
